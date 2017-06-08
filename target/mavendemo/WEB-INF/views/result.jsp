@@ -25,6 +25,20 @@
         <td>编号 </td>
         <td>${id}</td>
     </tr>
+    <tr>
+        <td>密码 </td>
+        <td>${password}</td>
+    </tr>
+    <tr>
+        <td>喜欢的框架</td>
+        <td><% String [] favoriteFrameworks = (String[]) request.getAttribute("favoriteFrameworks");
+            for (String framework: favoriteFrameworks){
+                out.println(framework);
+            }
+
+        %></td>
+
+    </tr>
 
 </table>
 

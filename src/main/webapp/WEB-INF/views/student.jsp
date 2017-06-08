@@ -28,6 +28,14 @@
             <td><form:input path="id"/> </td>
         </tr>
         <tr>
+            <td><form:label path="password">密码：</form:label></td>
+            <td><form:password path="password"/></td>
+        </tr>
+        <tr>
+            <td><form:label path="favoriteFrameworks">框架：</form:label></td>
+            <td><form:checkboxes path="favoriteFrameworks" items="${webFrameworkList}"/></td>
+        </tr>
+        <tr>
             <td colspan="2">
                 <input type="submit" value="提交">
             </td>

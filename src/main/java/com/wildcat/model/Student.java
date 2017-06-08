@@ -7,6 +7,8 @@ public class Student {
     private Integer age;
     private String name;
     private Integer id;
+    private String password;
+    private String [] favoriteFrameworks;
 
     public Integer getAge() {
         return age;
@@ -30,5 +32,21 @@ public class Student {
 
     public void setId(Integer id) {
         this.id = id;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public String[] getFavoriteFrameworks() {
+        return favoriteFrameworks;
+    }
+
+    public void setFavoriteFrameworks(String[] favoriteFrameworks) {
+        this.favoriteFrameworks = favoriteFrameworks;
     }
 }
