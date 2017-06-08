@@ -24,4 +24,7 @@
     <bean class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping"/>
     <!-- HandlerAdapater -->
     <bean class="org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter"/>
+    <!--加载静态文件-->
+    <mvc:resources location="/WEB-INF/pages/" mapping="/pages/**"/>
+    <mvc:default-servlet-handler />
 </beans>

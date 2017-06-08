@@ -1,4 +1,4 @@
-package com.wildcat.demo;
+package com.wildcat.model;
 
 /**
  * Created by lixingle on 2017/6/2.
