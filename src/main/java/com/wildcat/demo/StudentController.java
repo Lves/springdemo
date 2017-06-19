@@ -9,7 +9,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created by lixingle on 2017/6/2.
@@ -32,6 +34,7 @@ public class StudentController {
         model.addAttribute("id",student.getId());
         model.addAttribute("password",student.getPassword());
         model.addAttribute("favoriteFrameworks",student.getFavoriteFrameworks());
+        model.addAttribute("country",student.getCountry());
         return "result";
     }
     @ModelAttribute("webFrameworkList")
@@ -42,6 +45,15 @@ public class StudentController {
         list.add("Struts 2");
         list.add("Apatch Hadoop");
         return list;
+    }
+    @ModelAttribute("countryList")
+    public Map<String,String> countryList(){
+        Map<String,String> map = new HashMap<String, String>();
+        map.put("CH","China");
+        map.put("US","United States");
+        map.put("SG","Singapore");
+        map.put("MY","Malaysia");
+        return map;
     }
 
 }

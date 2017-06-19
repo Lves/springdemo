@@ -13,8 +13,7 @@
 
     <!-- 配置包扫描器 -->
     <context:component-scan base-package="com.wildcat.demo"/>
-    <!-- 配置注解驱动 -->
-    <mvc:annotation-driven/>
+
     <!-- 视图解析器 -->
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="prefix" value="/WEB-INF/views/"/>
@@ -24,7 +23,13 @@
     <bean class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping"/>
     <!-- HandlerAdapater -->
     <bean class="org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter"/>
+    <!-- 配置注解驱动 -->
+    <mvc:annotation-driven/>
     <!--加载静态文件-->
     <mvc:resources location="/WEB-INF/pages/" mapping="/pages/**"/>
     <mvc:default-servlet-handler />
+    <!--配置Validator-->
+    <bean id="userValidator" class="com.wildcat.demo.UserValidator"/>
+    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver"/>
+
 </beans>

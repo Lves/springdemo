@@ -39,6 +39,10 @@
         %></td>
 
     </tr>
+    <tr>
+        <td>国家 </td>
+        <td>${country}</td>
+    </tr>
 
 </table>
 

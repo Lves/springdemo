@@ -9,6 +9,7 @@ public class Student {
     private Integer id;
     private String password;
     private String [] favoriteFrameworks;
+    private String country;
 
     public Integer getAge() {
         return age;
@@ -48,5 +49,13 @@ public class Student {
 
     public void setFavoriteFrameworks(String[] favoriteFrameworks) {
         this.favoriteFrameworks = favoriteFrameworks;
+    }
+
+    public String getCountry() {
+        return country;
+    }
+
+    public void setCountry(String country) {
+        this.country = country;
     }
 }
